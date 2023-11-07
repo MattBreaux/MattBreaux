@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+   <p id="score">score:1</p>
+    <h6>バスケットボールの人たち</h6>
+    <img src = "https://media.tenor.com/6CLeTy_c2a8AAAAd/black-man.gif" width= "400" height= "400" id= "bigman">
+    <img  onclick="upgrade('oh')" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgBLge7SkGuDUKAl5x_4j_PrlKNQVNDk6Jwg:https://thenutbutton.com/cdn/shop/products/Nut-Button-Straight-Shot.png%3Fv%3D1692303452%26width%3D1445&usqp=CAU" id="upgrade">
+    <button id= "autoclicker"> wait for it... </button>
+    <script>
+
+    document.getElementById("bigman").addEventListener("click", addScore)
+    document.getElementById("autoclicker").addEventListener("click", autoClicker)
+    function addScore (){
+        score=score+itswizardtimemf
+        document.getElementById("score").innerText= score
+       
+    }
+    var score = 0
+    var itswizardtimemf = 1
+    var price = 10
+    function upgrade(){
+      
+      if(score>=10){
+        itswizardtimemf=itswizardtimemf+1
+        score=score-10
+      }
+    }
+
+    function autoClicker(){
+      setInterval(addScore,.00000000000000001)
+    }
+  
+</script>
+</body>
+</html>
